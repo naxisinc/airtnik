@@ -30,7 +30,7 @@ export class CapabilitiesPage implements OnInit {
   constructor(
     private capabilityService: CapabilityService,
     private pagerService: PagerService,
-    private authService: AuthService,
+    public authService: AuthService,
     private toast: ToastService,
     private router: Router
   ) {}

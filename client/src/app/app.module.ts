@@ -13,6 +13,10 @@ const appRoutes: Routes = [
   }
 ];
 
+export function tokenGetter() {
+  return localStorage.getItem('access_token');
+}
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -21,9 +25,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     JwtModule.forRoot({
       config: {
-        tokenGetter: () => {
-          return localStorage.getItem('x-auth');
-        }
+        tokenGetter
       }
     })
   ],
