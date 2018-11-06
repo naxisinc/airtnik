@@ -30,9 +30,9 @@ export class LoginPage implements OnInit {
       res => {
         // Storing the token in the localStorage
         res.headers.keys().map(key => {
-          if (key === 'x-auth') {
+          if (key === 'X-Auth') {
             const token = res.headers.get(key);
-            localStorage.setItem('x-auth', token);
+            localStorage.setItem('X-Auth', token);
           }
         });
         // Redirect from Dashboard
