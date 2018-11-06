@@ -32,11 +32,12 @@ const appRoutes: Routes = [
       { path: 'gables', component: CapabilitiesPage },
       { path: 'login', component: LoginPage },
       { path: 'recover-password', component: RecoverpassPage },
-      {
-        path: 'change-password',
-        component: ChangepassPage,
-        canActivate: [AuthGuard]
-      },
+      { path: 'change-password', component: ChangepassPage },
+      // {
+      //   path: 'change-password',
+      //   component: ChangepassPage,
+      //   canActivate: [AuthGuard]
+      // },
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: '**', component: NotFoundPage }
     ]
