@@ -9,7 +9,7 @@ export class CapabilityService {
   // Public Route
   getCapabilities(type) {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.get('http://localhost:3000/capabilities/' + type, {
+    return this.http.get('capabilities/' + type, {
       headers
     });
   }
@@ -20,7 +20,7 @@ export class CapabilityService {
       'Content-Type': 'application/json',
       'x-auth': localStorage.getItem('x-auth')
     });
-    return this.http.post('http://localhost:3000/capabilities/add', data, {
+    return this.http.post('capabilities/add', data, {
       headers
     });
   }
@@ -31,13 +31,9 @@ export class CapabilityService {
       'Content-Type': 'application/json',
       'x-auth': localStorage.getItem('x-auth')
     });
-    return this.http.put(
-      'http://localhost:3000/capabilities/' + data._id,
-      data,
-      {
-        headers
-      }
-    );
+    return this.http.put('capabilities/' + data._id, data, {
+      headers
+    });
   }
 
   // Private Route
@@ -45,7 +41,7 @@ export class CapabilityService {
     const headers = new HttpHeaders({
       'x-auth': localStorage.getItem('x-auth')
     });
-    return this.http.delete('http://localhost:3000/capabilities/' + id, {
+    return this.http.delete('capabilities/' + id, {
       headers
     });
   }
