@@ -61,7 +61,7 @@ router.post('/verify-email', async (req, res) => {
 
     // Setting email
     const mailOptions = {
-      from: 'Air Technik INC. <naxiscorp@gmail.com>',
+      from: 'Air Technik INC. <airtnik@gmail.com>',
       to: user.email,
       subject: 'Password reset instructions',
       text:
@@ -130,8 +130,8 @@ router.patch('/change-password', authenticate, async (req, res) => {
 router.post('/send-email', async (req, res) => {
   try {
     let mailOptions = {
-      from: 'Air Technik INC. <naxiscorp@gmail.com>',
-      to: 'naxiscorp@gmail.com',
+      from: 'Air Technik INC. <airtnik@gmail.com>',
+      to: 'airtnik@gmail.com',
       subject: 'Email sent from airtechnik.com',
       text:
         'From: ' +
