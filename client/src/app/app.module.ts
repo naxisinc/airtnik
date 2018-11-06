@@ -14,7 +14,7 @@ const appRoutes: Routes = [
 ];
 
 export function tokenGetter() {
-  return localStorage.getItem('X-Auth');
+  return localStorage.getItem('x-auth');
 }
 
 @NgModule({

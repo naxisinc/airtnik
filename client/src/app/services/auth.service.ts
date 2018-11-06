@@ -26,7 +26,7 @@ export class AuthService {
   changePassword(data) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'X-Auth': data.token
+      'x-auth': data.token
     });
     return this.http.patch('users/change-password', data, {
       headers
@@ -35,7 +35,7 @@ export class AuthService {
 
   logout() {
     const headers = new HttpHeaders({
-      'X-Auth': localStorage.getItem('X-Auth')
+      'x-auth': localStorage.getItem('x-auth')
     });
     return this.http.delete('users/logout', {
       headers,

@@ -18,7 +18,7 @@ export class CapabilityService {
   addCapability(data) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'X-Auth': localStorage.getItem('X-Auth')
+      'x-auth': localStorage.getItem('x-auth')
     });
     return this.http.post('capabilities/add', data, {
       headers
@@ -29,7 +29,7 @@ export class CapabilityService {
   updateCapability(data) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'X-Auth': localStorage.getItem('X-Auth')
+      'x-auth': localStorage.getItem('x-auth')
     });
     return this.http.put('capabilities/' + data._id, data, {
       headers
@@ -39,7 +39,7 @@ export class CapabilityService {
   // Private Route
   removeItem(id) {
     const headers = new HttpHeaders({
-      'X-Auth': localStorage.getItem('X-Auth')
+      'x-auth': localStorage.getItem('x-auth')
     });
     return this.http.delete('capabilities/' + id, {
       headers

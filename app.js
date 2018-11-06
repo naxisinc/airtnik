@@ -37,8 +37,8 @@ const port = process.env.PORT || 3000;
 // CORS Middleware
 app.use(
   cors({
-    allowedHeaders: ['X-Auth', 'Content-Type', 'Authorization'],
-    exposedHeaders: ['X-Auth']
+    allowedHeaders: ['x-auth', 'Content-Type', 'Authorization'],
+    exposedHeaders: ['x-auth']
   })
 );
 
