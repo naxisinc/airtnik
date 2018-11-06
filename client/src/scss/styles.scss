@@ -1,0 +1,170 @@
+/* You can add global styles to this file, and also import other style files */
+@import './vars';
+
+.intro-2 {
+  // background: url('https://mdbootstrap.com/img/Photos/Others/img%20(46).jpg')
+  background: url('../assets/intro.png') no-repeat center center;
+  background-size: cover;
+}
+.view {
+  height: 100vh !important;
+}
+.top-nav-collapse {
+  background-color: $primary-color-dark !important;
+}
+.navbar:not(.top-nav-collapse) {
+  // background: transparent !important;
+  background: $primary-color !important;
+}
+@media (max-width: 768px) {
+  .navbar:not(.top-nav-collapse) {
+    background: $primary-color-dark !important;
+  }
+}
+// .md-form .prefix {
+.md-form {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.prefix {
+  margin-top: 0.5rem;
+  color: rgb(88, 88, 88);
+}
+h6 {
+  line-height: 1.7;
+}
+// @media (max-width: 740px) {
+@media (max-width: 740px), (max-height: 740px) {
+  .full-height,
+  .full-height body,
+  .full-height header,
+  .full-height header .view {
+    // height: 1150px;
+    height: 1100px !important;
+  }
+  // Home Page
+  main {
+    margin-top: 0 !important;
+  }
+  .w-100 {
+    width: 100% !important;
+  }
+  #mrow {
+    margin: 0;
+  }
+}
+
+// My Styles
+body {
+  font: 15px/1.5 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.ls {
+  letter-spacing: 1px;
+}
+// Changing the Default Colors
+.primary-color {
+  background: $primary-color !important;
+  &-dark {
+    background: $primary-color-dark !important;
+  }
+}
+.secondary-color {
+  background: $secondary-color !important;
+  &-dark {
+    background: $secondary-color-dark !important;
+  }
+}
+.grey-text {
+  color: $primary-color !important;
+}
+.blue-text {
+  color: $secondary-color-dark !important;
+}
+
+// Main section
+main {
+  margin-top: 100vh;
+}
+// Evitar quedar bajo el header
+.page {
+  padding: 7rem 0 4rem 0;
+}
+
+// Pagination Styles
+#pagination {
+  margin: auto;
+  text-align: center;
+}
+.pagination.pg-blue .page-item.active .page-link {
+  background-color: $primary-color;
+}
+#pagination .page-link:hover {
+  background-color: $secondary-color;
+}
+
+// Edit and Delete Icons
+.yt-ic {
+  color: $primary-color !important;
+}
+.fb-ic {
+  color: $secondary-color-dark !important;
+}
+
+// Form Validation Messages
+.alert {
+  font-size: 0.8rem;
+  padding: 0 0.5rem;
+}
+
+// Alert Toast MDBoostrap
+.toast-top-right {
+  top: 5rem;
+}
+
+// Forms solos en paginas completas
+.md-form .prefix.active {
+  color: $secondary-color-dark;
+}
+#btn-submit:not([disabled]) {
+  background: $secondary-color-dark !important;
+}
+#form {
+  margin: auto;
+}
+@media all and (min-width: 1280px) {
+  #form {
+    width: 25vw !important;
+  }
+}
+// @media all and (max-width: 1690px) {
+//   #form {
+//     width: 25vw !important;
+//     background: orange;
+//   }
+// }
+@media all and (max-width: 1280px) {
+  #form {
+    width: 35vw !important;
+  }
+}
+@media all and (max-width: 980px) {
+  #form {
+    width: 50vw !important;
+  }
+}
+@media all and (max-width: 736px) {
+  #form {
+    width: 70vw !important;
+  }
+}
+@media all and (max-width: 480px) {
+  #form {
+    width: 95vw !important;
+  }
+}

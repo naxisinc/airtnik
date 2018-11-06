@@ -1,0 +1,13 @@
+@import '../../../scss/vars';
+
+.ca {
+  margin-left: 2.5rem;
+}
+// Fixing the big padding by default in textarea
+.md-form textarea.md-textarea {
+  padding: 0.5rem 0;
+}
+#team,
+#map {
+  padding-top: 6rem;
+}

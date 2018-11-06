@@ -1,0 +1,11 @@
+@import '../../../scss/vars';
+
+.my-footer {
+  background: $secondary-color-dark;
+  color: #fff;
+  margin-top: 90px;
+}
+ul#follow li {
+  display: inline;
+  padding: 1rem;
+}

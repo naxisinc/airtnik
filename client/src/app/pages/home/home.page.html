@@ -1,0 +1,238 @@
+<!--Main Navigation-->
+<header>
+
+  <!--Intro Section-->
+  <section class="view intro-2">
+    <div class="full-bg-img mask rgba-stylish-strong">
+      <div class="container flex-center">
+        <div class="d-flex align-items-center w-100">
+          <div id="mrow" class="row flex-center pt-5 mt-3 w-100">
+            <div class="col-md-6 text-center text-md-left">
+              <div class="white-text">
+                <h2 class="h1 display-4 wow fadeInLeft" data-wow-delay="0.3s">Air Technik, Inc.</h2>
+                <h4 class="wow fadeInLeft" data-wow-delay="0.3s">ENTHUSIASM, HONESTY and CREATIVITY</h4>
+                <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+                <h6 class="wow fadeInLeft" data-wow-delay="0.3s">AIR TECHNIK, INC. is an FAA certified repair station #T9KR795N. Funded in 1997 and conveniently located in
+                  Miami, Florida. In order to meet the high trend of technology in the aviation industry, AIR TECHNIK, INC.
+                  strides to accelerate development of high level technical services.</h6>
+                <!-- <br>
+                <a class="btn peach-gradient wow fadeInLeft waves-light" data-wow-delay="0.3s" mdbWavesEffect>Learn more</a> -->
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-5 offset-xl-1">
+              <div class="card wow fadeInRight" data-wow-delay="0.3s">
+                <div class="card-body z-depth-2">
+                  <!--Header-->
+                  <div class="text-center">
+                    <h3>Write to us:</h3>
+                    <hr>
+                  </div>
+                  <!--Form-->
+                  <form #contactForm="ngForm">
+
+                    <div class="md-form">
+                      <i class="fa fa-user prefix grey-text"></i>
+                      <input type="text" id="name" class="form-control" mdbInputDirective [mdbValidate]="false" required minlength="3" maxlength="25"
+                        [(ngModel)]="contact['name']" name="name" #name="ngModel">
+                      <label for="name">Your name</label>
+                      <!--Validation Message-->
+                      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger ca">
+                        <div *ngIf="name.errors.required">
+                          Name is required.
+                        </div>
+                        <div *ngIf="name.errors.minlength">
+                          Name must be at least 3 characters long.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="md-form">
+                      <i class="fa fa-envelope prefix grey-text"></i>
+                      <input type="email" email id="email" class="form-control" mdbInputDirective [mdbValidate]="false" required [(ngModel)]="contact['email']"
+                        name="email" #email="ngModel">
+                      <label for="email">Your email</label>
+                      <!--Validation Message-->
+                      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger ca">
+                        <div *ngIf="email.errors.required">
+                          Email is required.
+                        </div>
+                        <div *ngIf="email.errors.email">
+                          The email format is wrong.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="md-form">
+                      <i class="fa fa-pencil prefix grey-text"></i>
+                      <textarea type="text" id="message" class="md-textarea" mdbInputDirective [mdbValidate]="false" required minlength="10" maxlength="255"
+                        [(ngModel)]="contact['message']" name="message" #message="ngModel"></textarea>
+                      <label for="message">Your message</label>
+                      <!--Validation Message-->
+                      <div *ngIf="message.invalid && (message.dirty || message.touched)" class="alert alert-danger ca">
+                        <div *ngIf="message.errors.required">
+                          Message is required.
+                        </div>
+                        <div *ngIf="message.errors.minlength">
+                          Message must be at least 10 characters long.
+                        </div>
+                      </div>
+                    </div>
+
+                  </form>
+
+                  <div class="text-center">
+                    <button class="btn peach-gradient waves-light" mdbWavesEffect [disabled]="!contactForm.valid" (click)="send(); contactForm.reset()">Send</button>
+                  </div>
+
+                </div>
+              </div>
+              <!--/.Form-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</header>
+<!--Main Navigation-->
+
+<!--Main Layout-->
+<main>
+
+  <div class="container">
+
+    <!-- Section: Team v.1 -->
+    <section id="team" class="team-section text-center">
+
+      <!-- Section heading -->
+      <h2 class="h1-responsive font-weight-bold mb-5">Our amazing team</h2>
+      <!-- Section description -->
+      <p class="grey-text w-responsive mx-auto mb-5 ls">Engineers and certified technicians combine many years of experience on electronic design, development, overhaul maintenance
+        and repair oriented to meet the individual needs of our customers, to provide them with more reliable high quality
+        products in the Aviation Industry.</p>
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+          <div class="avatar mx-auto">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="rounded-circle z-depth-1" alt="Sample avatar">
+          </div>
+          <h5 class="font-weight-bold mt-4 mb-3">Mirta Etchegaray</h5>
+          <p class="text-uppercase blue-text">
+            <strong>President</strong>
+          </p>
+          <p class="grey-text ls">Takes care of the legal and accounting departments of the company.</p>
+          <ul class="list-unstyled mb-0">
+            <!-- Facebook -->
+            <a class="p-2 fa-lg fb-ic">
+              <i class="fa fa-facebook blue-text"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="p-2 fa-lg tw-ic">
+              <i class="fa fa-twitter blue-text"> </i>
+            </a>
+            <!-- Instagram -->
+            <a class="p-2 fa-lg ins-ic">
+              <i class="fa fa-instagram blue-text"> </i>
+            </a>
+          </ul>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+          <div class="avatar mx-auto">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" class="rounded-circle z-depth-1" alt="Sample avatar">
+          </div>
+          <h5 class="font-weight-bold mt-4 mb-3">Claudio Santarossa</h5>
+          <p class="text-uppercase blue-text">
+            <strong>General Manager</strong>
+          </p>
+          <p class="grey-text ls">Customer relations and project development.
+          </p>
+          <ul class="list-unstyled mb-0">
+            <!-- Facebook -->
+            <a class="p-2 fa-lg fb-ic">
+              <i class="fa fa-facebook blue-text"> </i>
+            </a>
+            <!-- Instagram -->
+            <a class="p-2 fa-lg ins-ic">
+              <i class="fa fa-instagram blue-text"> </i>
+            </a>
+          </ul>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-lg-3 col-md-6 mb-md-0 mb-5">
+          <div class="avatar mx-auto">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" class="rounded-circle z-depth-1" alt="Sample avatar">
+          </div>
+          <h5 class="font-weight-bold mt-4 mb-3">Luis Ojeda</h5>
+          <p class="text-uppercase blue-text">
+            <strong>Quality Control</strong>
+          </p>
+          <p class="grey-text ls">Responsible for the quality and reliability of all products.</p>
+          <ul class="list-unstyled mb-0">
+            <!-- Facebook -->
+            <a class="p-2 fa-lg fb-ic">
+              <i class="fa fa-facebook blue-text"> </i>
+            </a>
+            <!-- Instagram -->
+            <a class="p-2 fa-lg ins-ic">
+              <i class="fa fa-instagram blue-text"> </i>
+            </a>
+            <!-- Dribbble -->
+            <a class="p-2 fa-lg ins-ic">
+              <i class="fa fa-dribbble blue-text"> </i>
+            </a>
+          </ul>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-lg-3 col-md-6">
+          <div class="avatar mx-auto">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(8).jpg" class="rounded-circle z-depth-1" alt="Sample avatar">
+          </div>
+          <h5 class="font-weight-bold mt-4 mb-3">Evelio Carmona</h5>
+          <p class="text-uppercase blue-text">
+            <strong>Engineer</strong>
+          </p>
+          <p class="grey-text ls">Design and develop new products by programming and reverse engineering.</p>
+          <ul class="list-unstyled mb-0">
+            <!-- Facebook -->
+            <a class="p-2 fa-lg fb-ic">
+              <i class="fa fa-facebook blue-text"> </i>
+            </a>
+            <!-- Github -->
+            <a class="p-2 fa-lg ins-ic">
+              <i class="fa fa-github blue-text"> </i>
+            </a>
+          </ul>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </section>
+    <!-- Section: Team v.1 -->
+
+    <!-- Section Map -->
+    <section id="map">
+
+      <h2 class="h1-responsive font-weight-bold mb-5 text-center">Our Location</h2>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3590.955242550664!2d-80.3225882!3d25.8380201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9bbb53dcd715b%3A0xdd92ce3d8d23c1c3!2s7764+NW+71st+St%2C+Miami%2C+FL+33166!5e0!3m2!1sen!2sus!4v1443032690278"
+        allowfullscreen="" width="100%" height="300px" frameborder="0"></iframe>
+
+    </section>
+    <!-- Section Map -->
+
+  </div>
+
+</main>
+<!--Main Layout-->

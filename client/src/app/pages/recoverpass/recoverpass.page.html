@@ -1,0 +1,29 @@
+<div class="page">
+
+  <div class="container">
+
+    <div id="form">
+      <!-- Password Recover Form -->
+      <form #recoverForm="ngForm">
+        <p class="h4 text-center mb-4">Account Recovery</p>
+
+        <div class="md-form">
+          <i class="fa fa-envelope prefix"></i>
+          <input email class="form-control" id="email" required [(ngModel)]="email" name="email" mdbInputDirective
+            [mdbValidate]="false">
+          <label for="email">Your email</label>
+        </div>
+
+      </form>
+
+      <div class="text-right">
+        <button id="btn-submit" mdbBtn type="button" class="primary-color-dark waves-light" mdbWavesEffect [disabled]="!recoverForm.valid"
+          (click)="recover()">Send me reset password instructions</button>
+      </div>
+      <!-- Password Recover Form -->
+    </div>
+
+  </div>
+
+
+</div>

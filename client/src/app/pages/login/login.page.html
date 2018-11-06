@@ -1,0 +1,39 @@
+<div class="page">
+
+  <div id="form" class="container">
+
+    <!-- Login form -->
+    <form #loginForm="ngForm">
+      <p class="h4 text-center mb-4">Sign in</p>
+
+      <div class="md-form">
+        <i class="fa fa-envelope prefix"></i>
+        <!-- Aqui el type=email no funciona, tuve q agregar email como propiedad-->
+        <input type="email" class="form-control" id="email" required email [(ngModel)]="email" name="email" mdbInputDirective [mdbValidate]="false">
+        <label for="email">Your email</label>
+      </div>
+
+      <div class="md-form">
+        <i class="fa fa-lock prefix pl-1"></i>
+        <input type="password" class="form-control" id="password" required [(ngModel)]="password" name="password" mdbInputDirective
+          [mdbValidate]="false">
+        <label for="password">Your password</label>
+      </div>
+
+    </form>
+
+    <div class="row">
+      <div>
+        <button id="btn-submit" mdbBtn type="button" class="primary-color-dark waves-light" mdbWavesEffect [disabled]="!loginForm.valid"
+          (click)="onLogin()">Login</button>
+      </div>
+
+      <div class="forgot">
+        <a routerLink="/recover-password">Forgot password?</a>
+      </div>
+    </div>
+    <!-- Login form -->
+
+  </div>
+
+</div>
