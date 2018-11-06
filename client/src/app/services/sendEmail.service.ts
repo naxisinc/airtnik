@@ -8,10 +8,6 @@ export class SendEmailService {
 
   send(mailOptions) {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post(
-      'http://localhost:3000/users/send-email',
-      mailOptions,
-      { headers }
-    );
+    return this.http.post('users/send-email', mailOptions, { headers });
   }
 }

@@ -66,7 +66,7 @@ router.post('/verify-email', async (req, res) => {
       subject: 'Password reset instructions',
       text:
         'Hello.\nPlease, to reset your password follow the next link:' +
-        '\n\nhttp://localhost:3000/users/recovery-password/' +
+        '\n\nhttps://fast-shore-26090.herokuapp.com/users/recovery-password/' +
         token +
         '.\n\n' +
         'Please note that this confirmation link expires soon and may require your immediate attention if you wish to access your online account in the future.\n\n' +
@@ -101,8 +101,8 @@ router.get('/recovery-password/:token', async (req, res) => {
     res.redirect(
       decodeURIComponent(
         url.format({
-          protocol: 'http:',
-          host: 'localhost:4200',
+          protocol: 'https:',
+          host: 'fast-shore-26090.herokuapp.com',
           pathname: '/#/change-password',
           query: {
             token: resetPassToken
