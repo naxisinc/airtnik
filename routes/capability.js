@@ -6,7 +6,7 @@ const { authenticate } = require('../middleware/authenticate');
 router.get('/:type', async (req, res, next) => {
   try {
     let capabilities = await Capability.find({ type: req.params.type }).sort({
-      _id: -1
+      partnumber: 1
     });
 
     if (!capabilities) {
